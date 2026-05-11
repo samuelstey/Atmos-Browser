@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atmos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --text: #ffffff;
+            --accent: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo-container svg {
+            width: 100%;
+            height: auto;
+        }
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 2.8rem;
+            letter-spacing: -0.02em;
+            margin: 0 0 45px 0;
+            background: linear-gradient(180deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .search-box {
+            width: 540px;
+        }
+
+        form {
+            width: 540px;
+            position: relative;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 18px 25px;
+            background: var(--accent);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]::placeholder {
+            color: rgba(255, 255, 255, 0.35);
+        }
+
+        input[type="text"]:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="388" height="399" viewBox="0 0 388 399">
+                <path fill="white"
+                    d="M98.486 180.7C130.877 178.613 163.671 199.25 178.202 227.866C180.875 232.957 182.831 238.929 184.826 244.267C210.933 314.116 302.424 338.645 336.42 260.392C339.13 254.154 339.818 245.564 346.837 243.368C351.718 241.841 356.561 239.988 361.347 238.201C356.285 277.065 337.578 308.815 310.65 336.434C282.888 363.242 246.865 379.857 208.451 383.573C163.78 388.08 119.16 374.556 84.508 346.007C56.237 322.415 39.06 297.213 28.379 261.636C21.187 237.679 21.99 230.791 38.726 210.338C54.705 190.808 73.533 182.758 98.486 180.7Z" />
+                <path fill="white"
+                    d="M26.42 168.494C29.529 158.159 33.465 147.448 38.486 137.919C63.328 90.773 113.506 53.34 166.537 45.786C211.164 38.974 256.663 50.255 292.939 77.126C325.539 101.651 353.453 140.341 359.271 181.334C358.44 183.549 357.785 184.762 356.7 186.8C346.731 205.51 327.945 222.36 307 227.875C269.53 237.741 233.351 220.718 213.3 188.102C208.039 179.975 205.447 170.296 201.912 161.433C186.717 123.337 143.307 97.003 102.637 109.468C87.686 114.05 70.494 124.522 62.799 138.551L62.481 139.053C55.39 150.434 53.461 161.784 39.345 166.663C34.614 168.053 31.312 168.15 26.42 168.494Z" />
+            </svg>
+        </div>
+        <h1>Atmos</h1>
+        <form action="https://www.google.com/search" method="GET">
+            <input id="search-input" type="text" name="q" placeholder="Pesquisar na web..." autocomplete="off">
+        </form>
+    </div>
+    <footer>Atmos</footer>
+
+    <script>
+        // Auto-focus the search input on page load.
+        window.onload = function () {
+            var input = document.getElementById('search-input');
+            if (input) {
+                input.focus();
+            }
+        };
+    </script>
+</body>
+
+</html>

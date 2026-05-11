@@ -1,0 +1,14 @@
+googleadservices.com
+doubleclick.net
+google-analytics.com
+facebook.com/tr/
+googlesyndication.com
+ads.yahoo.com
+tm.jsuol.com.br
+banner.globo.com
+ads.globo.com
+ads.uol.com.br
+googleads.g.doubleclick.net
+pagead2.googlesyndication.com
+tpc.googlesyndication.com
+securepubads.g.doubleclick.net

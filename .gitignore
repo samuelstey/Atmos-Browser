@@ -1,0 +1,20 @@
+# Build e Binários
+build/
+Release/
+Debug/
+out/
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# Visual Studio
+.vs/
+*.user
+*.sln
+*.vcxproj
+*.filters
+
+# Cache e OS
+.DS_Store
+Thumbs.db
